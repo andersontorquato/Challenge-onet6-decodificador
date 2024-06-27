@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    --main-bg: #f3f5fc;
+    --sec-bg: white;
+    --ter-bg: #D8DFE8;
+    --four-bg: #f3f5fc;
+
+    --txt-first: #343A40;
+    --txt-second: #495057;
+    --txt-third: #D8DFE8;
+    --txt-four: #0a3871;
+
+    --highlight: #0a3871;
+
+    --btn-encrypt-bgcolor: #0a3871;
+    --btn-decrypt-bgcolor: #D8DFE8;
+
+    --btn-encrypt-txt-color: white;
+    --btn-decrypt-txt-color: #0a3871;
+
+    --btn-encrypt-border: white;
+    --btn-decrypt-border: #0a3871;
+
+    background-color: var(--main-bg);
+    margin: 2.5rem;
+    transition: .5s;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-alura-desktop {
+    width: 7.5rem;
+    height: 3rem;
+}
+
+.conteudo {
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.entrada-conteudo {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.texto-entrada-conteudo, .detalhes-saida-conteudo h2, p, .botao-entrada {
+    font-family: 'Inter', sans-serif;
+}
+
+.texto-entrada-conteudo {
+    width: 100%;
+    height: 53rem;
+    padding: 0.625rem;
+    resize: none;
+    border: none;
+    color: var(--txt-four);
+    font-size: 2rem;
+    background-color: var(--four-bg);
+}
+
+.alerta-entrada-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.img-alerta {
+    width: 1rem;
+    height: 1rem;
+}
+
+.alerta-entrada-conteudo p {
+    font-size: 0.75rem;
+    color: var(--txt-second);
+}
+
+.botoes-principais {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.botao-entrada {
+    width: 40%;
+    height: 4.1875rem;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    cursor: pointer; 
+}
+
+
+.botao-entrada:hover {
+    background-color: #0a3871;
+    color: white;
+    border-color: #0a3871;
+}
+
+#output-copy-button {
+    width: 90%;
+    height: 4.1875rem;
+    background-color: var(--sec-bg);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    border-color: var(--highlight);
+    color: var(--highlight);
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    cursor: pointer; 
+}
+
+#output-copy-button:hover {
+    background-color: #0a3871;
+    color: white;
+    border-color: #0a3871;
+}
+
+.saida-conteudo {
+    width: 40%; 
+    min-height: 50rem; 
+    background-color: var(--sec-bg);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; 
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.1);
+    padding: 2rem; 
+}
+
+.output-decoded {
+    display: none; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    height: 95%;
+    width: 100%; 
+}
+
+.output-text {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    color: var(--txt-second);
+    max-height: 90%; 
+    width: 90%;
+    overflow-wrap: anywhere;
+    text-align: center;
+}
+
+.content-output-details {
+    width: 100%; 
+    text-align: center;
+    margin-top: 2rem; 
+}
+
+.content-output-details img {
+    width: 90%; 
+}
+
+.content-output-details h2 {
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    color: var(--txt-first); 
+        margin-bottom: 1rem; 
+}
+
+.content-output-details p {
+    color: var(--txt-second);
+    font-size: 1rem; 
+}
+
+@media (max-width: 900px) {
+    .conteudo {
+        flex-direction: column;
+        gap: 4rem;
+        margin-top: 7.25rem;
+        width: auto;
+    }
+
+    .entrada-conteudo {
+        width: 95%;
+    }
+
+    .texto-entrada-conteudo {
+        height: 20rem;
+    }
+
+    .botoes-principais {
+        gap: 1.5rem;
+    }
+
+    .saida-conteudo {
+        width: 95%;
+        height: auto;
+        margin-bottom: 2.5rem;
+    }
+
+    .output-decoded {
+        display: none; 
+        }
+
+    .content-output-details img {
+        display: none; 
+    }
+
+    .content-output-details h2 {
+        font-size: 1.5rem; 
+    }
+
+    .content-output-details p {
+        font-size: 1rem; 
+    }
+}
+
+@media (max-width: 375px) {
+    .botao-entrada {
+        width: 90%;
+    }
+}

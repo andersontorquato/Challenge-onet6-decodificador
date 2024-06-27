@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./assets/image/logo_alura.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>Decodificador de Texto</title>
+</head>
+<body>
+    <header class="header">
+        <img src="./assets/image/logo_alura.svg" alt="Logo da Alura azul composto por um 'a'" class="logo-alura-desktop">
+    </header>
+    <main class="conteudo">
+        <section class="entrada-conteudo">
+            <textarea placeholder="Digite seu texto" class="texto-entrada-conteudo"></textarea>
+            <div class="alerta-entrada-conteudo">
+                <img src="./assets/image/exclam.png" alt="Círculo preenchido de cinza com um ponto de exclamação branco dentro" class="img-alerta">
+                <p>Apenas letras minúsculas e sem acento.</p>
+            </div>
+            <div class="botoes-principais">
+                <button class="botao-entrada" id="encrypt-button">Criptografar</button>
+                <button class="botao-entrada" id="decrypt-button">Descriptografar</button>
+            </div>
+        </section>
+        <section class="saida-conteudo">
+            <div class="output-decoded">
+                <p class="output-text"></p>
+                <button id="output-copy-button">Copiar</button>
+            </div>
+            <div class="content-output-details">
+                <img src="./assets/image/image_menino.svg" alt="Pessoa com uma lupa investigando um diamante">
+                <h2>Nenhuma mensagem válida encontrada</h2>
+                <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+            </div>
+        </section>
+    </main>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
